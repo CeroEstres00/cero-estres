@@ -1,0 +1,146 @@
+import Link from "next/link"
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+
+const quickLinks = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#proceso", label: "Proceso" },
+  { href: "#contacto", label: "Contacto" },
+]
+
+const services = [
+  { href: "#", label: "Reunificación de Deudas" },
+  { href: "#", label: "Ley de Segunda Oportunidad" },
+  { href: "#", label: "Negociación con Bancos" },
+  { href: "#", label: "Asesoría Legal" },
+  { href: "#", label: "Planificación Financiera" },
+]
+
+const legalLinks = [
+  { href: "#", label: "Política de Privacidad" },
+  { href: "#", label: "Aviso Legal" },
+  { href: "#", label: "Cookies" },
+  { href: "#", label: "Términos y Condiciones" },
+]
+
+const socialLinks = [
+  { href: "#", icon: Facebook, label: "Facebook" },
+  { href: "#", icon: Instagram, label: "Instagram" },
+  { href: "#", icon: Linkedin, label: "LinkedIn" },
+  { href: "#", icon: Twitter, label: "Twitter" },
+]
+
+export function Footer() {
+  return (
+    <footer id="contacto" className="bg-primary text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand & Contact */}
+          <div>
+            {/* Logo */}
+            <Link href="/" className="inline-flex items-baseline mb-6">
+              <span className="text-3xl font-bold text-white">C</span>
+              <span className="text-xl font-semibold text-white">ERO</span>
+              <span className="text-xl font-light text-white/60 mx-0.5">es</span>
+              <span className="text-3xl font-bold text-secondary">3</span>
+            </Link>
+            <p className="text-white/70 text-sm mb-6">
+              Ceroestrés Financiero - Tu solución para recuperar la tranquilidad económica que mereces.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <a href="tel:+34900000000" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+                <Phone className="h-5 w-5 text-secondary" />
+                <span>900 000 000</span>
+              </a>
+              <a href="mailto:info@ceroes3.com" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+                <Mail className="h-5 w-5 text-secondary" />
+                <span>info@ceroes3.com</span>
+              </a>
+              <div className="flex items-start gap-3 text-white/80">
+                <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Calle Ejemplo 123<br />28001 Madrid, España</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Enlaces Rápidos</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href} 
+                    className="text-white/70 hover:text-secondary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Servicios</h3>
+            <ul className="space-y-3">
+              {services.map((link) => (
+                <li key={link.label}>
+                  <Link 
+                    href={link.href} 
+                    className="text-white/70 hover:text-secondary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social & Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Síguenos</h3>
+            <div className="flex gap-3 mb-8">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.label}>
+                  <Link 
+                    href={link.href} 
+                    className="text-white/70 hover:text-secondary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-4 py-6">
+          <p className="text-center text-white/60 text-sm">
+            &copy; {new Date().getFullYear()} Cero Es 3 - Ceroestrés Financiero. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
