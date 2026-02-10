@@ -1,15 +1,15 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { 
-  CreditCard, 
-  FileText, 
-  Building2, 
-  PiggyBank, 
-  Scale, 
-  TrendingUp,
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  ArrowRight,
+  Building2,
+  CreditCard,
+  FileText,
+  PiggyBank,
+  Scale,
   Shield,
-  Users,
-  ArrowRight
+  TrendingUp,
+  Users
 } from "lucide-react"
 
 const services = [
@@ -61,7 +61,7 @@ export function Services() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Nuestros <span className="text-secondary">Servicios</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

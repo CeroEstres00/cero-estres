@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # Esto ayuda si tus funciones de Firestore tardan un poco más
+  node_handler = "todo"
+  included_files = ["next.config.js"]

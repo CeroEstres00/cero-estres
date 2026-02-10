@@ -17,7 +17,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="order-2 lg:order-1">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-primary/10 border border-border">
+            <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-primary/10 border border-border">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-muted-foreground">
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
@@ -48,7 +48,7 @@ export function About() {
             <ul className="grid sm:grid-cols-2 gap-3 mb-8">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
                   <span className="text-sm text-foreground">{feature}</span>
                 </li>
               ))}

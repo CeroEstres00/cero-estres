@@ -2,11 +2,11 @@
 
 import React from "react"
 
-import { useState, useEffect, useCallback } from "react"
-import Link from "next/link"
-import { Menu, X, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { ContactFormDialog } from "@/components/contact-form-dialog"
+import { Menu, Phone, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useCallback, useEffect, useState } from "react"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -48,9 +48,9 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-200 ${
         scrolled
-          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/95 shadow-md"
+          ? "bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/95 shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -59,10 +59,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-baseline">
-              <span className={`text-3xl font-bold transition-colors duration-300 ${scrolled ? "text-primary" : "text-white"}`}>C</span>
-              <span className={`text-xl font-semibold transition-colors duration-300 ${scrolled ? "text-primary" : "text-white"}`}>ERO</span>
-              <span className={`text-xl font-light mx-0.5 transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>es</span>
-              <span className="text-3xl font-bold text-secondary">3</span>
+              <Image src={scrolled ? "/logo.avif" : "/logoParaFondoNegro.avif"} alt="C3 Logo" width={32} height={32} className="size-22 object-contain" />
             </div>
           </Link>
 
@@ -95,10 +92,10 @@ export function Header() {
               <Phone className="h-5 w-5 text-secondary" />
               <span>900 000 000</span>
             </a>
-            <ContactFormDialog>
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+            <ContactFormDialog variant={"outline"} className={`bg-transparent hover:bg-secondary/50 duration-300 ${scrolled ? "border-primary text-primary" : "border-white text-white"}`}>
+              <span>
                 Consulta Gratis
-              </Button>
+              </span>
             </ContactFormDialog>
           </div>
 
@@ -144,9 +141,9 @@ export function Header() {
                   <span>900 000 000</span>
                 </a>
                 <ContactFormDialog>
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  <div className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     Consulta Gratis
-                  </Button>
+                  </div>
                 </ContactFormDialog>
               </div>
             </nav>

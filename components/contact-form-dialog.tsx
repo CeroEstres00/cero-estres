@@ -1,26 +1,27 @@
 "use client"
 
-import React from "react"
+import { ComponentProps, ReactNode } from "react"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle } from "lucide-react"
+import { useState } from "react"
 
-interface ContactFormDialogProps {
-  children: React.ReactNode
+interface ContactFormDialogProps extends ComponentProps<typeof Button> {
+  children: ReactNode;
+  // Puedes extender directamente de las props del Botón para mayor facilidad
 }
 
-export function ContactFormDialog({ children }: ContactFormDialogProps) {
+export function ContactFormDialog({ children, ...props }: ContactFormDialogProps) {
   const [open, setOpen] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -66,9 +67,9 @@ export function ContactFormDialog({ children }: ContactFormDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <button type="button" onClick={() => setOpen(true)} className="contents">
+      <Button variant={"default"} size={"xl"} {...props} onClick={() => setOpen(true)} className={`border-white text-white bg-secondary hover:bg-secondary/50 ${props.className}`}>
         {children}
-      </button>
+      </Button>
 
       <DialogContent className="sm:max-w-md">
         {submitted ? (
