@@ -59,7 +59,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-baseline">
-              <Image src={scrolled ? "/logo.avif" : "/logoParaFondoNegro.avif"} alt="C3 Logo" width={32} height={32} className="size-22 object-contain" />
+              <Image src={scrolled ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-22 object-contain" unoptimized/>
             </div>
           </Link>
 

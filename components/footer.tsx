@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="inline-flex items-baseline mb-6">
-              <Image src="/logo.avif" alt="C3 Logo" width={32} height={32} className="size-18 object-contain" unoptimized/>
+              <Image src="/logoParaFondoNegro.avif" alt="C3 Logo" width={32} height={32} className="size-18 object-contain" unoptimized/>
             </Link>
             <p className="text-white/70 text-sm mb-6">
               Ceroestrés Financiero - Tu solución para recuperar la tranquilidad económica que mereces.
@@ -37,10 +37,10 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-secondary" />
                 <span>900 000 000</span>
               </a>
-              <a href="mailto:info@ceroes3.com" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+              <span className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Mail className="h-5 w-5 text-secondary" />
                 <span>info@ceroes3.com</span>
-              </a>
+              </span>
               <div className="flex items-start gap-3 text-white/80">
                 <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                 <span>Calle Ejemplo 123<br />28001 Madrid, España</span>

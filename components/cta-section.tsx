@@ -1,5 +1,4 @@
 import { ContactFormDialog } from "@/components/contact-form-dialog"
-import { Button } from "@/components/ui/button"
 import { ArrowRight, MessageCircle } from "lucide-react"
 
 export function CTASection() {
@@ -20,17 +19,15 @@ export function CTASection() {
             y te propondrán las mejores soluciones disponibles.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4 justify-center">
             <ContactFormDialog>
-              <div className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2">
                 <ArrowRight className="h-5 w-5" />
                 Solicita tu Consulta Gratuita
-              </div>
             </ContactFormDialog>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2 bg-transparent">
+            <a className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-white text-white hover:bg-white/10  bg-transparent">
               <MessageCircle className="h-5 w-5" />
               Escríbenos por WhatsApp
-            </Button>
+            </a>
           </div>
 
           <p className="mt-8 text-white/60 text-sm">

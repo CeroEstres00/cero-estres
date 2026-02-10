@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   ArrowRight,
@@ -11,6 +10,7 @@ import {
   TrendingUp,
   Users
 } from "lucide-react"
+import { ContactFormDialog } from "./contact-form-dialog"
 
 const services = [
   {
@@ -89,20 +89,14 @@ export function Services() {
                 <p className="text-muted-foreground text-sm mb-4">
                   {service.description}
                 </p>
-                <Button variant="link" className="p-0 h-auto text-secondary hover:text-secondary/80 gap-1">
+                <ContactFormDialog variant="link" className="p-0 h-auto bg-transparent text-secondary hover:bg-transparent duration-300">
                   Saber más <ArrowRight className="h-4 w-4" />
-                </Button>
+                </ContactFormDialog>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-            Ver Todos los Servicios
-          </Button>
-        </div>
       </div>
     </section>
   )
