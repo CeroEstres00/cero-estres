@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     // Usamos Promise.all para que Firebase y Google corran al mismo tiempo
     const firebasePromise = db.collection("contacts").add(sanitizedData);
     
-    const urlSheets = "https://script.google.com/macros/s/AKfycbxHSFtHaGsdLayAPzrusEmG4YM-2P8smN0_3pk2kDyxo1TdPhsvX3TSh1Frp2Cq_DXcAQ/exec";
+    const urlSheets = process.env.APPSCRIPT_URL || "undefined";
     const googlePromise = fetch(urlSheets, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
