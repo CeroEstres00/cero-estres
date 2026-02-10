@@ -4,10 +4,10 @@ import { NextResponse } from "next/server"
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, phone, message} = body 
+    const { name, city, email, phone, message} = body 
 
     // 1. Validaciones rápidas (falla pronto)
-    if (!name || !email || !phone) {
+    if (!name || !city || !email || !phone) {
       return NextResponse.json({ error: "Campos obligatorios faltantes" }, { status: 400 })
     }
 
@@ -18,6 +18,7 @@ export async function POST(request: Request) {
 
     const sanitizedData = {
       name: name.trim(),
+      city: city.trim(),
       email: email.trim().toLowerCase(),
       phone: phone.trim(),
       message: message?.trim() || "",
@@ -34,6 +35,7 @@ export async function POST(request: Request) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         nombre: sanitizedData.name,
+        ciudad: sanitizedData.city,
         email: sanitizedData.email,
         mensaje: sanitizedData.message,
       }),

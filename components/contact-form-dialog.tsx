@@ -35,6 +35,7 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
     const formData = new FormData(e.currentTarget)
     const data = {
       name: formData.get("name") as string,
+      city: formData.get("city") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       message: formData.get("message") as string,
@@ -100,6 +101,16 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
                   id="name"
                   name="name"
                   placeholder="Tu nombre y apellidos"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="city">Ciudad</Label>
+                <Input
+                  id="city"
+                  name="city"
+                  placeholder="Tu ciudad"
                   required
                 />
               </div>
