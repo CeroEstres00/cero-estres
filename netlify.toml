@@ -1,11 +1,15 @@
 [build]
-  command = "npm run build"
+  command = "pnpm run build"
   publish = ".next"
+
+[build.environment]
+  # Esto le dice a Netlify que instale pnpm antes de empezar
+  NPM_FLAGS = "--version" 
+  PNPM_FLAGS = "--frozen-lockfile"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  # Esto ayuda si tus funciones de Firestore tardan un poco más
-  node_handler = "todo"
   included_files = ["next.config.js"]
+  external_node_modules = ["firebase"]
