@@ -1,57 +1,27 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   ArrowRight,
-  Building2,
   CreditCard,
   FileText,
-  PiggyBank,
-  Scale,
-  Shield,
-  TrendingUp,
-  Users
+  Scale
 } from "lucide-react"
 import { ContactFormDialog } from "./contact-form-dialog"
 
 const services = [
   {
     icon: CreditCard,
-    title: "Reunificación de Deudas",
-    description: "Unifica todas tus deudas en una sola cuota mensual más cómoda y manejable.",
+    title: "Normaliza tus deudas",
+    description: "Llega a acuerdos de pago con tus acreedores que sí puedas cumplir. Te acompañamos en el proceso de descargue de tus deudas.",
   },
   {
     icon: FileText,
-    title: "Ley de Segunda Oportunidad",
-    description: "Te ayudamos a cancelar tus deudas legalmente y empezar de nuevo sin cargas financieras.",
-  },
-  {
-    icon: Building2,
-    title: "Negociación con Bancos",
-    description: "Negociamos en tu nombre con las entidades financieras para obtener mejores condiciones.",
-  },
-  {
-    icon: PiggyBank,
-    title: "Ahorro Financiero",
-    description: "Diseñamos estrategias de ahorro adaptadas a tu situación económica actual.",
+    title: "Conciliamos embargos y procesos jurídicos",
+    description: "Llega a etapas de conciliación y evita que los procesos avancen y afecten o pierdas tu patrimonio.",
   },
   {
     icon: Scale,
-    title: "Asesoría Legal",
-    description: "Equipo de abogados especializados en derecho financiero a tu disposición.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Planificación Financiera",
-    description: "Creamos un plan financiero personalizado para alcanzar tus objetivos.",
-  },
-  {
-    icon: Shield,
-    title: "Protección Patrimonial",
-    description: "Protegemos tus bienes y patrimonio de posibles embargos o reclamaciones.",
-  },
-  {
-    icon: Users,
-    title: "Mediación Familiar",
-    description: "Resolvemos conflictos económicos familiares de forma amistosa y efectiva.",
+    title: "Asesoramos en procesos de reorganización",
+    description: "Asesoramos a personas naturales para que se acojan a la ley de insolvencia, permitiéndoles reorganizar y pagar sus deudas de acuerdo con su capacidad económica actual.",
   },
 ]
 
@@ -71,11 +41,11 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 border-border hover:border-secondary/50"
+              className="group justify-between hover:shadow-lg transition-all duration-300 border-border hover:border-secondary/50"
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/10 transition-colors">

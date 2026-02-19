@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Play } from "lucide-react"
 
 const steps = [
   {
@@ -43,10 +42,6 @@ export function Process() {
                   {step.number}
                 </div>
                 
-                {/* Video Button */}
-                <button type="button" className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary hover:bg-secondary/90 transition-colors mb-6">
-                  <Play className="h-5 w-5 text-secondary-foreground ml-0.5" />
-                </button>
 
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {step.title}

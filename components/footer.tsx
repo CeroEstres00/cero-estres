@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
+import { Building, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -28,18 +28,25 @@ export function Footer() {
               <Image src="/logoParaFondoNegro.avif" alt="C3 Logo" width={32} height={32} className="size-18 object-contain" unoptimized/>
             </Link>
             <p className="text-white/70 text-sm mb-6">
-              Ceroestrés Financiero - Tu solución para recuperar la tranquilidad económica que mereces.
+              CEROESTRES Financiero
+              <br />
+              Asesorías en Insolvencia SAS
+              
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+34900000000" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+              <a href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Phone className="h-5 w-5 text-secondary" />
-                <span>900 000 000</span>
+                <span>+57 304 2675943</span>
               </a>
               <span className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+                <Building className="h-5 w-5 text-secondary" />
+                <span>NIT 901.996.201-6</span>
+              </span>
+              <span className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Mail className="h-5 w-5 text-secondary" />
-                <span>info@ceroes3.com</span>
+                <span>ceroestresinsolvencia@gmail.com</span>
               </span>
               <div className="flex items-start gap-3 text-white/80">
                 <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
@@ -93,7 +100,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <p className="text-center text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} Cero Es 3 - Ceroestrés Financiero. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Ceroestrés Financiero. Todos los derechos reservados.
           </p>
         </div>
       </div>

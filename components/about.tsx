@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
+import Image from "next/image"
+import { ContactFormDialog } from "./contact-form-dialog"
 
 const features = [
   "Equipo de expertos financieros y legales",
@@ -16,28 +17,17 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="order-2 lg:order-1">
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-primary/10 border border-border">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-4xl">👥</span>
-                  </div>
-                  <p className="text-sm">Imagen del equipo</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="order-2 lg:order-1 overflow-hidden rounded-lg">
+            <Image src={"/equipo.avif"} alt="Imagen de personas con traje elegante" width={600} height={400} className="size-full object-contain"/>
+          </div> 
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Expertos en Eliminar tu <span className="text-secondary">Estrés Financiero</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+              Profesionales especializados en <span className="text-secondary">soluciones legales para crisis financieras personales.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              En Cero Es 3 entendemos que los problemas financieros pueden afectar todos los aspectos de tu vida. 
-              Por eso, nuestro equipo de profesionales trabaja incansablemente para ofrecerte las mejores soluciones 
-              y ayudarte a recuperar la tranquilidad que mereces.
+              CEROESTRÉS FINANCIERO es un grupo de profesionales en busca de soluciones, nace en el año 2021, con el propósito de ofrecer una solución clara y efectiva para las personas naturales que enfrentan ESTRES financiero por sus deudas. Ayudamos por medio de los beneficios de la ley 2445 del 2025 Insolvencia Persona Natural (antes ley 1564 del 2012) a obtener soluciones que permitan recuperar su estabilidad económica
             </p>
             <p className="text-muted-foreground mb-8">
               Nos especializamos en casos complejos y situaciones que otros consideran imposibles. 
@@ -54,9 +44,12 @@ export function About() {
               ))}
             </ul>
 
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Conoce a Nuestro Equipo
-            </Button>
+            <ContactFormDialog size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <>
+              <ArrowRight className="h-5 w-5" />
+              Agenda una reunión
+            </>
+            </ContactFormDialog>
           </div>
         </div>
       </div>
