@@ -23,7 +23,7 @@ export function CTASection() {
                 <ArrowRight className="h-5 w-5" />
                 Solicitar evaluación financiera gratuita
             </ContactFormDialog>
-            <a className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-white text-white hover:bg-white/10  bg-transparent">
+            <a target="_blank" rel="noreferrer noopener" href="https://wa.me/573182406163" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-white text-white hover:bg-white/10  bg-transparent">
               <MessageCircle className="h-5 w-5" />
               Escríbenos por WhatsApp
             </a>

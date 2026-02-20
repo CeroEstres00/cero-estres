@@ -26,7 +26,7 @@ export function Hero() {
                   Solicitar evaluación financiera gratuita
                 </>
               </ContactFormDialog>
-              <a target="_blank" rel="noopener noreferrer" href="#" className="h-12 w-full inline-flex border rounded-lg justify-center items-center  duration-300 border-white text-white hover:bg-white/10 gap-2 bg-transparent text-lg">
+              <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573182406163" className="h-12 w-full inline-flex border rounded-lg justify-center items-center  duration-300 border-white text-white hover:bg-white/10 gap-2 bg-transparent text-lg">
                 <MessageCircle className="h-5 w-5" />
                 Escríbenos
               </a>

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ContactFormDialog } from "./contact-form-dialog";
 
 const steps = [
   {
@@ -80,14 +80,14 @@ export function Process() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+        <div className="text-center mt-12 w-2/4 grid mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center items-center">
+            <ContactFormDialog size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
               Ver los Siguientes Pasos
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
+            </ContactFormDialog>
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573182406163" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-primary hover:bg-white/10  bg-transparent">
               Contacta con Nosotros
-            </Button>
+            </a>
           </div>
         </div>
       </div>
