@@ -9,24 +9,24 @@ export function Hero() {
       </div>
       
       <div className="container mx-auto px-4 pt-32 pb-20 relative z-20">
-        <div className="grid gap-12 justify-center items-center">
+        <div className="grid gap-12 justify-center items-center w-full ">
           {/* Content */}
-          <div className="text-center grid place-items-center">
+          <div className="text-center grid place-items-center max-w-full *:max-w-full">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
               <span className="text-secondary">Recupere su estabilidad</span> financiera legalmente y detenga embargos, demandas y presión de cobranza.
-            </h1>
+            </h1> 
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl mx-auto lg:mx-0 w-full">
               Te ayudamos a recuperar el control de tu economía con soluciones personalizadas y efectivas. Sin complicaciones, sin estrés.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <ContactFormDialog className="text-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center lg:justify-start">
+              <ContactFormDialog className="text-lg max-w-full">
                 <>
                   <ArrowRight className="h-5 w-5" />
                   Solicitar evaluación financiera gratuita
                 </>
               </ContactFormDialog>
-              <a target="_blank" rel="noopener noreferrer" href="#" className="h-12 w-full inline-flex border rounded-lg justify-center items-center px-8 duration-300 border-white text-white hover:bg-white/10 gap-2 bg-transparent text-lg">
+              <a target="_blank" rel="noopener noreferrer" href="#" className="h-12 w-full inline-flex border rounded-lg justify-center items-center  duration-300 border-white text-white hover:bg-white/10 gap-2 bg-transparent text-lg">
                 <MessageCircle className="h-5 w-5" />
                 Escríbenos
               </a>

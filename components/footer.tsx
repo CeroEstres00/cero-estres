@@ -36,9 +36,9 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+              <a href="https://wa.me/573182406163" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Phone className="h-5 w-5 text-secondary" />
-                <span>+57 304 2675943</span>
+                <span>+57 318 2406163</span>
               </a>
               <span className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Building className="h-5 w-5 text-secondary" />
@@ -50,7 +50,7 @@ export function Footer() {
               </span>
               <div className="flex items-start gap-3 text-white/80">
                 <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                <span>Calle Ejemplo 123<br />28001 Madrid, España</span>
+                <span>Carrera 48 # 50 sur 128<br />Oficina 8013</span>
               </div>
             </div>
           </div>

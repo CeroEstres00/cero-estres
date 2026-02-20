@@ -9,6 +9,11 @@ import { ContactFormDialog } from "./contact-form-dialog"
 
 const services = [
   {
+    icon: Scale,
+    title: "Asesoramos en procesos de reorganización",
+    description: "Asesoramos a personas naturales para que se acojan a la ley de insolvencia, permitiéndoles reorganizar y pagar sus deudas de acuerdo con su capacidad económica actual.",
+  },
+  {
     icon: CreditCard,
     title: "Normaliza tus deudas",
     description: "Llega a acuerdos de pago con tus acreedores que sí puedas cumplir. Te acompañamos en el proceso de descargue de tus deudas.",
@@ -17,12 +22,7 @@ const services = [
     icon: FileText,
     title: "Conciliamos embargos y procesos jurídicos",
     description: "Llega a etapas de conciliación y evita que los procesos avancen y afecten o pierdas tu patrimonio.",
-  },
-  {
-    icon: Scale,
-    title: "Asesoramos en procesos de reorganización",
-    description: "Asesoramos a personas naturales para que se acojan a la ley de insolvencia, permitiéndoles reorganizar y pagar sus deudas de acuerdo con su capacidad económica actual.",
-  },
+  }
 ]
 
 export function Services() {
@@ -35,8 +35,7 @@ export function Services() {
             Nuestros <span className="text-secondary">Servicios</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ofrecemos soluciones integrales para recuperar tu tranquilidad financiera. 
-            Cada caso es único y lo tratamos con la dedicación que merece.
+            En CEROESTRÉS FINANCIERO transformamos tu angustia, en soluciones; ayudamos a los colombianos a reconstruir, Ver la vida con esperanza y nuevas oportunidades, respaldados legal y jurídicamente, y acompañado de la experiencia de nuestros profesionales. Una vida CEROESTRES
           </p>
         </div>
 

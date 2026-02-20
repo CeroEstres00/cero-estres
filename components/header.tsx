@@ -84,13 +84,13 @@ export function Header() {
           {/* Phone & CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" 
+              href="https://wa.me/573182406163" target="_blank" rel="noopener noreferrer" 
               className={`flex items-center gap-2 font-semibold transition-colors duration-300 ${
                 scrolled ? "text-primary" : "text-white"
               }`}
             >
               <Phone className="h-5 w-5 text-secondary" />
-              <span>+57 304 2675943</span>
+              <span>+57 318 2406163</span>
             </a>
             <ContactFormDialog variant={"outline"} className={`bg-transparent hover:bg-secondary/50 duration-300 ${scrolled ? "border-primary text-primary" : "border-white text-white"}`}>
               <span>
