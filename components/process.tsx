@@ -80,8 +80,8 @@ export function Process() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12 w-2/4 grid mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center items-center">
+        <div className="text-center mt-12 w-full md:w-2/4 grid mx-auto">
+          <div className="grid grid-rows-2 lg:grid-rows-1 grid-cols-1 lg:grid-cols-2 gap-4 justify-center items-center">
             <ContactFormDialog size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
               Ver los Siguientes Pasos
             </ContactFormDialog>
