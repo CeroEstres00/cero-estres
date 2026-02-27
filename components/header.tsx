@@ -3,7 +3,7 @@
 import React from "react"
 
 import { ContactFormDialog } from "@/components/contact-form-dialog"
-import { Menu, Phone, X } from "lucide-react"
+import { Mail, Menu, Phone, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useCallback, useEffect, useState } from "react"
@@ -49,17 +49,17 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-200 ${
-        scrolled
+        scrolled || isMenuOpen
           ? "bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/95 shadow-md"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-22 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-baseline">
-              <Image src={scrolled ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-22 object-contain" unoptimized/>
+              <Image src={scrolled || isMenuOpen ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-24 object-contain" unoptimized/>
             </div>
           </Link>
 
@@ -71,7 +71,7 @@ export function Header() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-sm font-medium transition-colors duration-300 cursor-pointer ${
-                  scrolled
+                  scrolled || isMenuOpen
                     ? "text-foreground/80 hover:text-secondary"
                     : "text-white/90 hover:text-white"
                 }`}
@@ -83,16 +83,17 @@ export function Header() {
 
           {/* Phone & CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="https://wa.me/573182406163" target="_blank" rel="noopener noreferrer" 
-              className={`flex items-center gap-2 font-semibold transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-white"
-              }`}
-            >
-              <Phone className="h-5 w-5 text-secondary" />
-              <span>+57 318 2406163</span>
-            </a>
-            <ContactFormDialog variant={"outline"} className={`bg-transparent hover:bg-secondary/50 duration-300 ${scrolled ? "border-primary text-primary" : "border-white text-white"}`}>
+              <a
+                href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" 
+                className={`flex items-center text-xl gap-2 font-semibold transition-colors duration-300 ${
+                  scrolled || isMenuOpen ? "text-primary" : "text-white"
+                }`}
+              >
+                <Phone className="size-7 text-secondary" />
+                <span>+57 304 2675943</span>
+              </a>
+
+            <ContactFormDialog variant={"outline"} className={`bg-transparent hover:bg-secondary/50 duration-300 ${scrolled || isMenuOpen ? "border-primary text-primary" : "border-white text-white"}`}>
               <span>
                 Consulta Gratis
               </span>
@@ -107,16 +108,16 @@ export function Header() {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className={`h-6 w-6 transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`} />
+              <X className={`h-6 w-6 transition-colors duration-300 ${scrolled || isMenuOpen ? "text-foreground" : "text-white"}`} />
             ) : (
-              <Menu className={`h-6 w-6 transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`} />
+              <Menu className={`h-6 w-6 transition-colors duration-300 ${scrolled || isMenuOpen ? "text-foreground" : "text-white"}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className={`lg:hidden py-4 border-t ${scrolled ? "border-border" : "border-white/20 bg-primary/95 backdrop-blur"}`}>
+          <div className={`lg:hidden py-4 border-t `}>
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
@@ -124,7 +125,7 @@ export function Header() {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={`text-sm font-medium transition-colors cursor-pointer ${
-                    scrolled
+                    scrolled || isMenuOpen
                       ? "text-foreground/80 hover:text-secondary"
                       : "text-white/90 hover:text-white"
                   }`}
@@ -132,14 +133,20 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
-              <div className={`pt-4 border-t ${scrolled ? "border-border" : "border-white/20"}`}>
+              <div className={`pt-4 border-t ${scrolled || isMenuOpen ? "border-border" : "border-white/20"}`}>
+              <div className="grid">
                 <a
-                  href="tel:+34900000000"
-                  className={`flex items-center gap-2 font-semibold mb-4 ${scrolled ? "text-primary" : "text-white"}`}
+                  href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer"
+                  className={`flex items-center gap-2 font-semibold mb-4 ${scrolled || isMenuOpen ? "text-primary" : "text-white"}`}
                 >
-                  <Phone className="h-5 w-5 text-secondary" />
-                  <span>900 000 000</span>
+                  <Phone className="size-7 text-secondary" />
+                  <span>+57 304 2675943</span>
                 </a>
+                <span className="flex items-center font-semibold mb-4 gap-2 hover:text-secondary transition-colors">
+                  <Mail className="size-7 text-secondary" />
+                  <span>ceroestresinsolvencia@gmail.com</span>
+                </span>
+              </div>
                 <ContactFormDialog>
                   <div className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     Consulta Gratis

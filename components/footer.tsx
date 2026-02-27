@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="inline-flex items-baseline mb-6">
-              <Image src="/logoParaFondoNegro.avif" alt="C3 Logo" width={32} height={32} className="size-18 object-contain" unoptimized/>
+              <Image src="/logoParaFondoNegro.avif" alt="C3 Logo" width={32} height={32} className="size-32 object-contain" unoptimized/>
             </Link>
             <p className="text-white/70 text-sm mb-6">
               CEROESTRES Financiero
@@ -36,9 +36,9 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="https://wa.me/573182406163" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
+              <a href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Phone className="h-5 w-5 text-secondary" />
-                <span>+57 318 2406163</span>
+                <span>+57 304 2675943</span>
               </a>
               <span className="flex items-center gap-3 text-white/80 hover:text-secondary transition-colors">
                 <Building className="h-5 w-5 text-secondary" />

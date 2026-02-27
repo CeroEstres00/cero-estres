@@ -1,6 +1,7 @@
 import { About } from "@/components/about"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { GoogleMapSection } from "@/components/googleMapSection"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Process } from "@/components/process"
@@ -17,6 +18,7 @@ export default function Home() {
         <Services />
         <About />
         <Process />
+        <GoogleMapSection />
         <CTASection />
       </main>
       <Footer />

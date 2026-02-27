@@ -132,7 +132,7 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="+34 600 000 000"
+                  placeholder="+57 XXX XXX XXXX"
                   required
                 />
               </div>

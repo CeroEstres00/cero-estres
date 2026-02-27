@@ -16,12 +16,12 @@ const services = [
   {
     icon: CreditCard,
     title: "Normaliza tus deudas",
-    description: "Llega a acuerdos de pago con tus acreedores que sí puedas cumplir. Te acompañamos en el proceso de descargue de tus deudas.",
+    description: "Llegamos a acuerdos de pago con tus acreedores que sí puedas cumplir. Te acompañamos en el proceso de descargue de tus deudas.",
   },
   {
     icon: FileText,
     title: "Conciliamos embargos y procesos jurídicos",
-    description: "Llega a etapas de conciliación y evita que los procesos avancen y afecten o pierdas tu patrimonio.",
+    description: "Llegamos a etapas de conciliación y evita que los procesos avancen y afecten o pierdas tu patrimonio.",
   }
 ]
 

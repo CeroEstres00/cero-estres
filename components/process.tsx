@@ -24,7 +24,7 @@ const steps = [
   {
     number: "05",
     title: "¿Recibes llamadas constantes de cobro que te roban tu paz?",
-    description: "Intervenimos en la comunicación con tus acreedores para detener el acoso y canalizar las negociaciones de forma profesional.",
+    description: "Gestionamos bajo las normas el acoso en llamadas y canalizar bajo acuerdos en las  negociaciones de forma profesional.",
   },
   {
     number: "06",
@@ -85,7 +85,7 @@ export function Process() {
             <ContactFormDialog size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
               Ver los Siguientes Pasos
             </ContactFormDialog>
-            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573182406163" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-primary hover:bg-white/10  bg-transparent">
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573042675943" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-primary hover:bg-white/10  bg-transparent">
               Contacta con Nosotros
             </a>
           </div>
