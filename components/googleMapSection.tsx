@@ -22,7 +22,7 @@ export function GoogleMapSection() {
             </div>
             
             <p className="text-gray-600 text-lg leading-relaxed">
-              Sabemos que dar el primer paso hacia la libertad financiera requiere confianza. Te esperamos en nuestras oficinas para brindarte una asesoría legal personalizada y diseñar tu plan de insolvencia.
+              Sabemos que dar el primer paso hacia la libertad financiera requiere confianza. Te esperamos en nuestras oficinas para brindarte una asesoría legal personalizada.
             </p>
 
             <div className="space-y-4 text-left">

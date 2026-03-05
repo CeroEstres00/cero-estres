@@ -9,9 +9,6 @@ const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-body" });
 export const metadata: Metadata = {
   title: 'C3 | Ceroestrés Financiero',
   description: 'Soluciones financieras para eliminar el estrés de tus finanzas personales y empresariales',
-  icons: {
-    apple: '/apple-touch-icon.png',
-  },
 }
 
 export default function RootLayout({

@@ -48,7 +48,7 @@ export function Process() {
             Si a estas preguntas contestas que sí <span className="text-secondary">¡necesitas CERO ESTRÉS!.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un proceso simple y transparente diseñado para liberarte del estrés financiero paso a paso.
+            Un proceso simple y transparente diseñado para liberarte del estrés financiero.
           </p>
         </div>
 
