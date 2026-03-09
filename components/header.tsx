@@ -55,11 +55,11 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-22 items-center justify-between">
+        <div className="flex h-23 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-baseline">
-              <Image src={scrolled || isMenuOpen ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-24 object-contain" unoptimized/>
+              <Image src={scrolled || isMenuOpen ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-22 lg:size-26 object-contain" unoptimized/>
             </div>
           </Link>
 
@@ -70,7 +70,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-sm font-medium transition-colors duration-300 cursor-pointer ${
+                className={`text-lg font-medium transition-colors duration-300 cursor-pointer ${
                   scrolled || isMenuOpen
                     ? "text-foreground/80 hover:text-secondary"
                     : "text-white/90 hover:text-white"
