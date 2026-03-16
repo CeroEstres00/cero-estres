@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { name, city, email, phone, message} = body 
 
-    // 1. Validaciones rápidas (falla pronto)
+    // 1. Validaciones rápidas
     if (!name || !city || !email || !phone) {
       return NextResponse.json({ error: "Campos obligatorios faltantes" }, { status: 400 })
     }
@@ -25,25 +25,26 @@ export async function POST(request: Request) {
       createdAt: new Date().toISOString(),
     }
 
-    // 2. Ejecución en paralelo para ahorrar tiempo
-    // Usamos Promise.all para que Firebase y Google corran al mismo tiempo
-    const firebasePromise = db.collection("contacts").add(sanitizedData);
+    // 2. Esperamos SOLO a Firebase porque necesitamos su ID para la respuesta
+    const docRef = await db.collection("contacts").add(sanitizedData);
     
+    // 3. Disparamos Google Sheets en segundo plano (SIN 'await')
     const urlSheets = process.env.APPSCRIPT_URL || "undefined";
-    const googlePromise = fetch(urlSheets, {
+    
+    // Guardamos la promesa en una variable o simplemente la ejecutamos
+    fetch(urlSheets, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         nombre: sanitizedData.name,
+        telefono: sanitizedData.phone,
         ciudad: sanitizedData.city,
         email: sanitizedData.email,
         mensaje: sanitizedData.message,
       }),
-    }).catch(err => console.error("Error en Google Script:", err)); // No dejamos que Google rompa todo
+    }).catch(err => console.error("Error en Google Script:", err));
 
-    // Esperamos ambas, pero el tiempo total será el de la más lenta
-    const [docRef] = await Promise.all([firebasePromise, googlePromise]);
-
+    // 4. Retornamos la respuesta inmediatamente al usuario
     return NextResponse.json(
       { success: true, id: docRef.id },
       { status: 201 },
