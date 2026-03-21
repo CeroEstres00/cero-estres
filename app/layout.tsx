@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Montserrat, Open_Sans } from 'next/font/google';
 import React from "react";
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <GoogleTagManager gtmId="GTM-NGDM86GN" />
       <body className={`${montserrat.variable} ${openSans.variable} font-sans antialiased`}>
         {children}
       </body>
