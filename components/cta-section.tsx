@@ -20,10 +20,10 @@ export function CTASection() {
 
           <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4 justify-center">
             <ContactFormDialog className="text-lg">
-                <ArrowRight className="h-5 w-5" />
-                Solicitar asesoría profesional gratuita
+              <ArrowRight className="h-5 w-5" />
+              Solicitar asesoría profesional gratuita
             </ContactFormDialog>
-            <a target="_blank" rel="noreferrer noopener" href="https://wa.me/573042675943" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-white text-white hover:bg-white/10  bg-transparent">
+            <a target="_blank" id="ctaWhatsappButton" rel="noreferrer noopener" href="https://wa.me/573042675943" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-white text-white hover:bg-white/10  bg-transparent">
               <MessageCircle className="h-5 w-5" />
               Escríbenos por WhatsApp
             </a>

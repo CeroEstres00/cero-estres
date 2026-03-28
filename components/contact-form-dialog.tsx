@@ -94,7 +94,7 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
               </DialogDescription>
             </DialogHeader>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 pt-2">
+            <form id="contactForm" onSubmit={handleSubmit} className="flex flex-col gap-4 pt-2">
               <div className="flex flex-col gap-2">
                 <Label htmlFor="name">Nombre completo</Label>
                 <Input
@@ -154,6 +154,7 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
               )}
 
               <Button
+                id="submitContactForm"
                 type="submit"
                 size="lg"
                 disabled={loading}

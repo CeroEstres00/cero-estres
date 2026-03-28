@@ -48,18 +48,17 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-200 ${
-        scrolled || isMenuOpen
-          ? "bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/95 shadow-md"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-200 ${scrolled || isMenuOpen
+        ? "bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/95 shadow-md"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-23 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-baseline">
-              <Image src={scrolled || isMenuOpen ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-22 lg:size-26 object-contain" unoptimized/>
+              <Image src={scrolled || isMenuOpen ? "/logo.avif" : "/logoParaFondoNegro.avif"} loading="eager" alt="C3 Logo" width={32} height={32} className="size-22 lg:size-26 object-contain" unoptimized />
             </div>
           </Link>
 
@@ -70,11 +69,10 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-lg font-medium transition-colors duration-300 cursor-pointer ${
-                  scrolled || isMenuOpen
-                    ? "text-foreground/80 hover:text-secondary"
-                    : "text-white/90 hover:text-white"
-                }`}
+                className={`text-lg font-medium transition-colors duration-300 cursor-pointer ${scrolled || isMenuOpen
+                  ? "text-foreground/80 hover:text-secondary"
+                  : "text-white/90 hover:text-white"
+                  }`}
               >
                 {link.label}
               </a>
@@ -83,15 +81,15 @@ export function Header() {
 
           {/* Phone & CTA */}
           <div className="hidden lg:flex items-center gap-4">
-              <a
-                href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer" 
-                className={`flex items-center text-xl gap-2 font-semibold transition-colors duration-300 ${
-                  scrolled || isMenuOpen ? "text-primary" : "text-white"
+            <a
+              id="headerWhatsappButton"
+              href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer"
+              className={`flex items-center text-xl gap-2 font-semibold transition-colors duration-300 ${scrolled || isMenuOpen ? "text-primary" : "text-white"
                 }`}
-              >
-                <Phone className="size-7 text-secondary" />
-                <span>+57 304 2675943</span>
-              </a>
+            >
+              <Phone className="size-7 text-secondary" />
+              <span>+57 304 2675943</span>
+            </a>
 
             <ContactFormDialog variant={"outline"} className={`bg-transparent hover:bg-secondary/50 duration-300 ${scrolled || isMenuOpen ? "border-primary text-primary" : "border-white text-white"}`}>
               <span>
@@ -124,29 +122,29 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`text-sm font-medium transition-colors cursor-pointer ${
-                    scrolled || isMenuOpen
-                      ? "text-foreground/80 hover:text-secondary"
-                      : "text-white/90 hover:text-white"
-                  }`}
+                  className={`text-sm font-medium transition-colors cursor-pointer ${scrolled || isMenuOpen
+                    ? "text-foreground/80 hover:text-secondary"
+                    : "text-white/90 hover:text-white"
+                    }`}
                 >
                   {link.label}
                 </a>
               ))}
               <div className={`pt-4 border-t ${scrolled || isMenuOpen ? "border-border" : "border-white/20"}`}>
-              <div className="grid">
-                <a
-                  href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer"
-                  className={`flex items-center gap-2 font-semibold mb-4 ${scrolled || isMenuOpen ? "text-primary" : "text-white"}`}
-                >
-                  <Phone className="size-7 text-secondary" />
-                  <span>+57 304 2675943</span>
-                </a>
-                <span className="flex items-center font-semibold mb-4 gap-2 hover:text-secondary transition-colors">
-                  <Mail className="size-7 text-secondary" />
-                  <span>ceroestresinsolvencia@gmail.com</span>
-                </span>
-              </div>
+                <div className="grid">
+                  <a
+                    id="headerWhatsappButton"
+                    href="https://wa.me/573042675943" target="_blank" rel="noopener noreferrer"
+                    className={`flex items-center gap-2 font-semibold mb-4 ${scrolled || isMenuOpen ? "text-primary" : "text-white"}`}
+                  >
+                    <Phone className="size-7 text-secondary" />
+                    <span>+57 304 2675943</span>
+                  </a>
+                  <span className="flex items-center font-semibold mb-4 gap-2 hover:text-secondary transition-colors">
+                    <Mail className="size-7 text-secondary" />
+                    <span>ceroestresinsolvencia@gmail.com</span>
+                  </span>
+                </div>
                 <ContactFormDialog>
                   <div className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     Consulta Gratis

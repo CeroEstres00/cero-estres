@@ -61,7 +61,7 @@ export function Process() {
                 <div className="text-6xl font-bold text-secondary/40 mb-4">
                   {step.number}
                 </div>
-                
+
 
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {step.title}
@@ -85,7 +85,7 @@ export function Process() {
             <ContactFormDialog size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
               Ver los Siguientes Pasos
             </ContactFormDialog>
-            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573042675943" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-primary hover:bg-white/10  bg-transparent">
+            <a target="_blank" id="processWhatsappForm" rel="noopener noreferrer" href="https://wa.me/573042675943" className="size-full flex gap-2 px-4 border-2 rounded-lg justify-center items-center border-primary hover:bg-white/10  bg-transparent">
               Contacta con Nosotros
             </a>
           </div>
