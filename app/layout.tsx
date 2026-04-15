@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <GoogleTagManager gtmId="GTM-KJJV49ZJ" />
+      <GoogleTagManager gtmId="GTM-NGDM86GN" />
       <body className={`${montserrat.variable} ${openSans.variable} font-sans antialiased`}>
         {children}
       </body>
