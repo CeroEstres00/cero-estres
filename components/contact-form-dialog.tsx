@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle } from "lucide-react"
 import { useState } from "react"
 
@@ -35,10 +34,8 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
     const formData = new FormData(e.currentTarget)
     const data = {
       name: formData.get("name") as string,
-      city: formData.get("city") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
-      message: formData.get("message") as string,
     }
 
     try {
@@ -105,15 +102,6 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="city">Ciudad</Label>
-                <Input
-                  id="city"
-                  name="city"
-                  placeholder="Tu ciudad"
-                  required
-                />
-              </div>
 
               <div className="flex flex-col gap-2">
                 <Label htmlFor="email">Correo electrónico</Label>
@@ -137,15 +125,6 @@ export function ContactFormDialog({ children, ...props }: ContactFormDialogProps
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="message">Cuéntanos brevemente tu situación</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Describe tu situación financiera actual y cómo podemos ayudarte..."
-                  rows={3}
-                />
-              </div>
 
               {error && (
                 <p className="text-sm text-red-600 bg-red-50 rounded-md px-3 py-2">

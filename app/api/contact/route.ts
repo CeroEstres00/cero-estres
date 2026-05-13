@@ -4,10 +4,10 @@ import { NextResponse } from "next/server"
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, city, email, phone, message} = body 
+    const { name, email, phone } = body 
 
     // 1. Validaciones rápidas
-    if (!name || !city || !email || !phone) {
+    if (!name || !email || !phone) {
       return NextResponse.json({ error: "Campos obligatorios faltantes" }, { status: 400 })
     }
 
@@ -18,10 +18,8 @@ export async function POST(request: Request) {
 
     const sanitizedData = {
       name: name.trim(),
-      city: city.trim(),
       email: email.trim().toLowerCase(),
       phone: phone.trim(),
-      message: message?.trim() || "",
       createdAt: new Date().toISOString(),
     }
 
@@ -38,9 +36,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         nombre: sanitizedData.name,
         telefono: sanitizedData.phone,
-        ciudad: sanitizedData.city,
         email: sanitizedData.email,
-        mensaje: sanitizedData.message,
       }),
     }).catch(err => console.error("Error en Google Script:", err));
 
