@@ -7,6 +7,7 @@ import { Hero } from "@/components/hero"
 import { Process } from "@/components/process"
 import { Services } from "@/components/services"
 import { Stats } from "@/components/stats"
+import { WelcomePopup } from "@/components/welcome-popup"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <CTASection />
       </main>
       <Footer />
+      <WelcomePopup />
     </>
   )
 }
