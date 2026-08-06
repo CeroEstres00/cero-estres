@@ -53,7 +53,7 @@ export function WelcomePopup() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://wa.me/573042675943"
+              href="https://wa.me/573042675943?text=%C2%A1Hola%21%20Quiero%20saber%20c%C3%B3mo%20salir%20de%20la%20insolvencia"
               onClick={() => handleClose(false)}
               className="w-full h-12 inline-flex gap-2 items-center justify-center bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
             >
